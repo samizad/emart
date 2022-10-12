@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, NavLink } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addItem, delItem } from '../redux/action';
 import {
   Container,
   Col,
@@ -16,6 +18,10 @@ const Product = () => {
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(false);
   const { id } = useParams();
+  const dispatch = useDispatch();
+  const addProduct = (product) => {
+    dispatch(addItem(product));
+  };
   useEffect(() => {
     const getProduct = async () => {
       setLoading(true);
@@ -73,7 +79,10 @@ const Product = () => {
           <p className="lead fw-bolder">
             {product.description}
           </p>
-          <Button variant="outline-dark px-4 py-2">
+          <Button
+            variant="outline-dark px-4 py-2"
+            onClick={() => addProduct(product)}
+          >
             Add to Cart
           </Button>
           <NavLink

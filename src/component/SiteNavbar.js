@@ -9,12 +9,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faUserPlus,
-  faRightToBracket,
-  faCartShopping
+  faRightToBracket
 } from '@fortawesome/free-solid-svg-icons';
-import { NavLink } from 'react-router-dom';
+
 import { LinkContainer } from 'react-router-bootstrap';
-library.add(faUserPlus, faRightToBracket, faCartShopping);
+
+import CartBtn from './CartBtn';
+library.add(faUserPlus, faRightToBracket);
 
 const SiteNavbar = () => {
   return (
@@ -60,13 +61,7 @@ const SiteNavbar = () => {
             />
             Register
           </Button>
-          <Button variant="outline-dark" className="me-2">
-            <FontAwesomeIcon
-              icon="fa-solid fa-cart-shopping"
-              className="me-1 ms-2 "
-            />
-            Cart(0)
-          </Button>{' '}
+          <CartBtn />
         </Container>
       </Navbar>
     </div>

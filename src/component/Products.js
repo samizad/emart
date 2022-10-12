@@ -102,7 +102,10 @@ const Products = () => {
           return (
             <>
               <Col md={3} className="mb-4" key={product.id}>
-                <Card className="h-100 text-center p-4">
+                <Card
+                  className="h-100 text-center p-4"
+                  key={product.id}
+                >
                   <Card.Img
                     variant="top"
                     src={product.image}

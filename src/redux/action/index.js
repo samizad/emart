@@ -1,14 +1,14 @@
-//for add Item to Card
+//for add Item to Cart
 
-export const addCard = (product) => {
+export const addItem = (product) => {
   return {
     type: 'ADDITEM',
     payload: product
   };
 };
-//for Delete Item from Card
+//for Delete Item from Cart
 
-export const delCard = (product) => {
+export const delItem = (product) => {
   return {
     type: 'DELITEM',
     payload: product

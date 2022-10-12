@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import Store from './redux/store';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root')
@@ -13,7 +15,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <BrowserRouter>
     <React.StrictMode>
-      <App />
+      <Provider store={Store}>
+        <App />
+      </Provider>
     </React.StrictMode>
   </BrowserRouter>
 );
