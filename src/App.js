@@ -6,6 +6,8 @@ import Products from './component/Products';
 import Product from './component/Product';
 import Cart from './component/Cart';
 
+import Checkout from './component/Checkout';
+
 function App() {
   return (
     <>
@@ -19,6 +21,10 @@ function App() {
         <Route
           path="/products/:id"
           element={<Product />}
+        ></Route>
+        <Route
+          path="/checkout"
+          element={<Checkout />}
         ></Route>
         <Route path="/cart" element={<Cart />}></Route>
       </Routes>

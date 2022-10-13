@@ -7,6 +7,8 @@ import {
   Col,
   CloseButton
 } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
+import { Nav, Button } from 'react-bootstrap';
 const Cart = () => {
   const state = useSelector((state) => state.handleCart);
   const dispatch = useDispatch();
@@ -59,11 +61,31 @@ const Cart = () => {
       </>
     );
   };
+  const button = () => {
+    return (
+      <Container>
+        <Row>
+          <LinkContainer to="/checkout">
+            <Nav.Link>
+              {' '}
+              <Button
+                variant="outline-dark"
+                className="mb-5 w-25 mx-auto "
+              >
+                Proceed To Checkout
+              </Button>
+            </Nav.Link>
+          </LinkContainer>
+        </Row>
+      </Container>
+    );
+  };
 
   return (
     <>
       {state.length === 0 && cartEmpty()}
       {state.length !== 0 && state.map(cartItems)}
+      {state.length !== 0 && button()}
     </>
   );
 };
