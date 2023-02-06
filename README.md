@@ -1,3 +1,30 @@
+# Name
+Emart Diva Collection
+
+# Description
+an online shop available in below address:
+https://63ce24e109b1707ced92d8b9--friendly-centaur-d4688f.netlify.app/
+  
+
+# Some Features
+filterable Products Page
+Product page consist of rating, price and description
+add to Card
+Go to card
+Card page
+
+# Next Feature
+Register, Login and logout pages
+Add comment
+add like button
+About page
+Contact Page
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
